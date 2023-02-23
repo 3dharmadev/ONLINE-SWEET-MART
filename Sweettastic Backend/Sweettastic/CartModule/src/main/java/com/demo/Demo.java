@@ -1,4 +1,4 @@
-package com.masai.cart.demo;
+package com.masai.sweetorder.demo;
 
 public class Demo {
 	public void demo() {
