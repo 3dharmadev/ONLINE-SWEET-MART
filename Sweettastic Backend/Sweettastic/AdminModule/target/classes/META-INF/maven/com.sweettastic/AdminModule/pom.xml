@@ -6,4 +6,21 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>AdminModule</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sweettastic</groupId>
+  		<artifactId>CustomerModule</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sweettastic</groupId>
+  		<artifactId>ProductModule</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sweettastic</groupId>
+  		<artifactId>CategoryModule</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
