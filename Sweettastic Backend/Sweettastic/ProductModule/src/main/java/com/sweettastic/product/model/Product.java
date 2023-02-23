@@ -1,15 +1,21 @@
 package com.sweettastic.product.model;
 
+import com.sweettastic.category.model.*;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+
 
 @Data
 @AllArgsConstructor
@@ -39,6 +45,7 @@ public class Product {
 	private Boolean available;
 	
 	@NotNull
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Category category;
 
 	public Integer getProductid() {
