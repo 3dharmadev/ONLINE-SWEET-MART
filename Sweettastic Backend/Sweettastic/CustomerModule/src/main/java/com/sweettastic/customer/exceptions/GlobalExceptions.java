@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 
 @ControllerAdvice
