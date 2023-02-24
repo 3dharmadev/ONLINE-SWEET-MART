@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.sweettastic.Cart.Model.Cart;
+import com.sweettastic.sweetorder.model.SweetOrder;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,9 +28,9 @@ public class Customer {
 	@JoinColumn(referencedColumnName = "userId")
 	private Set<SweetOrder> sweetOrders=new HashSet<>();// override equals and hashcode
 	
-	@OneToMany(cascade = CascadeType.ALL)//targetEntity=SweetItem.class
-	@JoinColumn(referencedColumnName = "userId")
-	private List<SweetItem> SweetItems=new ArrayList<>();
+//	@OneToMany(cascade = CascadeType.ALL)//targetEntity=SweetItem.class
+//	@JoinColumn(referencedColumnName = "userId")
+//	private List<SweetItem> SweetItems=new ArrayList<>();
 	
 	@OneToOne
 	private Cart cart;
