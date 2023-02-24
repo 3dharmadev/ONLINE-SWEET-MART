@@ -1,6 +1,7 @@
 package com.sweettastic.product.model;
 
-import com.sweettastic.category.model.*;
+ 
+import com.sweettastic.category.model.Category;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

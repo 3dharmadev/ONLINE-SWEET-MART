@@ -1,6 +1,7 @@
 package com.sweettastic.sweetorder.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.sweettastic.customer.model.Customer;
@@ -38,7 +39,7 @@ public class SweetOrder {
 	
 	@OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	@JoinColumn(name = "sweetOrderId")
-	private List<Product>  products;
+	private List<Product>  products=new ArrayList<>();
 	
 	@NotNull
 	private LocalDate date;
