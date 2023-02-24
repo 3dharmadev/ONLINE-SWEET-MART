@@ -48,7 +48,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/sweettastic/customer/getCustomerDetails{id}")
-	public ResponseEntity<List<Customer>> showAllCustomerDetails(@PathVariable("id") Long userId) throws CustomerException{
+	public ResponseEntity<Customer> showAllCustomerDetails(@PathVariable("id") Long userId) throws CustomerException{
 		return new ResponseEntity<>(customerService.showCustomerDetailsById(userId),HttpStatus.FOUND);
 	}
 	

@@ -72,10 +72,19 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public List<Customer> showAllCustomerDetails(Long customerId) throws CustomerException {
-		// TODO Auto-generated method stub
-		return null;
+	public Customer showCustomerDetailsById(Long userId) throws CustomerException {
+  
+		Optional<Customer> opt=customerDao.findById(userId);
+		
+		if(opt.isEmpty()) {
+			throw new CustomerException("Customer does not exists");
+		}
+		return opt.get();
 	}
+
+
+
+	
 	
 
 }

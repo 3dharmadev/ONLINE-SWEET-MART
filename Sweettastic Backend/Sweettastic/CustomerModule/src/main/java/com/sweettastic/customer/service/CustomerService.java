@@ -15,6 +15,6 @@ public interface CustomerService {
 	
 	public List<Customer> showAllCustomers() throws CustomerException;
 	
-	public List<Customer> showCustomerDetailsById(Long userId) throws CustomerException;
+	public Customer showCustomerDetailsById(Long userId) throws CustomerException;
 
 }
