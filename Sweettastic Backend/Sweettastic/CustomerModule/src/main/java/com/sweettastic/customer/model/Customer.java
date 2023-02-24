@@ -16,10 +16,10 @@ import jakarta.persistence.OneToOne;
 @Entity
 public class Customer {
 	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
+	private int temp;
 	private String username;
 	@OneToMany(cascade = CascadeType.ALL)//targetEntity=SweetItem.class
 	@JoinColumn(referencedColumnName = "userId")
@@ -31,6 +31,54 @@ public class Customer {
 	
 	@OneToOne
 	private Cart cart;
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public int getTemp() {
+		return temp;
+	}
+
+	public void setTemp(int temp) {
+		this.temp = temp;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Set<SweetOrder> getSweetOrders() {
+		return sweetOrders;
+	}
+
+	public void setSweetOrders(Set<SweetOrder> sweetOrders) {
+		this.sweetOrders = sweetOrders;
+	}
+
+	public List<SweetItem> getSweetItems() {
+		return SweetItems;
+	}
+
+	public void setSweetItems(List<SweetItem> sweetItems) {
+		SweetItems = sweetItems;
+	}
+
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 	
 	
 
