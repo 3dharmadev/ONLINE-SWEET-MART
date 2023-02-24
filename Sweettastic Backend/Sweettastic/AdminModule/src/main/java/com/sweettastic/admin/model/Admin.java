@@ -1,19 +1,23 @@
 package com.sweettastic.admin.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.sweettastic.user.model.User;
+import com.sweettastic.Cart.Model.Cart;
 import com.sweettastic.category.model.Category;
+import com.sweettastic.customer.model.Customer;
 import com.sweettastic.product.model.Product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -25,12 +29,21 @@ public class Admin {
 	@NotNull
 	@Size(max = 15,min = 8)
 	private String password;
-	
-	private List<Customer> list;
-	private List<User> users;
-	private List<Product> products;
-	private List<Category> categories;
-	private List<Cart> carts;
+
+	@OneToMany
+	private List<Customer> customers=new ArrayList<>();
+
+	@OneToMany
+	private List<User> Users =new ArrayList<>();
+
+	@OneToMany
+	private List<Product> products=new ArrayList<>();
+
+	@OneToMany
+	private List<Category> categories=new ArrayList<>();
+
+	@OneToMany
+	private List<Cart> carts=new ArrayList<>();
 	
 	
 	

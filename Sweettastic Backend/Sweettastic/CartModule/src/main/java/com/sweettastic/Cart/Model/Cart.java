@@ -1,12 +1,11 @@
 package com.sweettastic.Cart.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.sweettastic.product.model.Product;
+import jakarta.persistence.*;
+
 @Entity
 public class Cart {
 
@@ -14,8 +13,9 @@ public class Cart {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer cartId;
 	private Double grandTotal;
-	@Embedded
-	private List<Product> listProduct;
+	@OneToMany
+	//@ElementCollection
+	private List<Product> listProduct=new ArrayList<>();
 	private Integer productCount;
 	private Double total;
 	public Cart() {
@@ -59,8 +59,15 @@ public class Cart {
 	public void setTotal(Double total) {
 		this.total = total;
 	}
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return "Cart{" +
+				"cartId=" + cartId +
+				", grandTotal=" + grandTotal +
+				", listProduct=" + listProduct +
+				", productCount=" + productCount +
+				", total=" + total +
+				'}';
+	}
 }

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sweettastic.user.exceptions.UserException;
-import com.sweettastic.user.model.user;
+import com.sweettastic.user.model.User;
 import com.sweettastic.user.repository.userRepository;
 @Service
 public class UserServicesImple implements UserServices{
@@ -16,15 +16,15 @@ public class UserServicesImple implements UserServices{
 	private userRepository userRepo;
 	
 	@Override
-	public user saveuser(user u1) {
-		user u2= userRepo.save(u1);
+	public User saveuser(User u1) {
+		User u2= userRepo.save(u1);
 		return u2;
 	}
 
 	@Override
-	public user UpdateUser(user users) {
+	public User UpdateUser(User users) {
 		
-		 Optional<user> opt= userRepo.findById(users.getUserId());
+		 Optional<User> opt= userRepo.findById(users.getUserId());
 		 
 		 if(opt.isPresent())
 		 {
@@ -38,7 +38,7 @@ public class UserServicesImple implements UserServices{
 
 	@Override
 	public String CancelUser(Integer userId) {
-		Optional<user> opt=userRepo.findById(userId);
+		Optional<User> opt=userRepo.findById(userId);
 		if(opt.isPresent())
 		{
 			userRepo.deleteById(userId);
@@ -53,8 +53,8 @@ public class UserServicesImple implements UserServices{
 	}
 
 	@Override
-	public List<user> ShowAllUser() {
-		List<user> allUser=userRepo.findAll();
+	public List<User> ShowAllUser() {
+		List<User> allUser=userRepo.findAll();
 		if(!allUser.isEmpty())
 		{
 			return allUser;

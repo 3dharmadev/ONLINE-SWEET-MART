@@ -2,14 +2,14 @@ package com.sweettastic.user.service;
 
 import java.util.List;
 
-import com.sweettastic.user.model.user;
+import com.sweettastic.user.model.User;
 
 public interface UserServices {
 
 	
-	public user saveuser(user u1);
+	public User saveuser(User u1);
 	
-	public user UpdateUser(user users);
+	public User UpdateUser(User users);
 	public String  CancelUser(Integer userId);
-	public List<user> ShowAllUser();
+	public List<User> ShowAllUser();
 }

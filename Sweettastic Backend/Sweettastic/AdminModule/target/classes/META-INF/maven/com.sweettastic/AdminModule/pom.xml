@@ -22,5 +22,16 @@
   		<artifactId>CategoryModule</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>com.sweettastic</groupId>
+  		<artifactId>CartModule</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>com.sweettastic</groupId>
+  		<artifactId>UserModule</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>

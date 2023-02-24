@@ -17,7 +17,7 @@ import com.sweettastic.Cart.Model.Cart;
 import com.sweettastic.Cart.Service.CartService;
 
 @RestController
-public class CardController {
+public class CartController {
 
 	
 	@Autowired

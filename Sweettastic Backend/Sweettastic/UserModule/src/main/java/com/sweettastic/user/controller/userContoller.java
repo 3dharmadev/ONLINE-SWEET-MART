@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sweettastic.user.model.user;
+import com.sweettastic.user.model.User;
 import com.sweettastic.user.service.UserServices;
 
 @RestController
@@ -23,15 +23,15 @@ public class userContoller {
 	private UserServices userServices;
 
 	@PostMapping("/users")
-	public ResponseEntity<user> saveUser(@RequestBody user u1)
+	public ResponseEntity<User> saveUser(@RequestBody User u1)
 	{
-		 user u4= userServices.saveuser(u1);
+		 User u4= userServices.saveuser(u1);
 		 
 		 return new ResponseEntity<>(u4,HttpStatus.OK);
 	}
 	@PutMapping("/users")
-	public ResponseEntity<user> UpdateUser(@RequestBody user u){
-		user updateduser =userServices.UpdateUser(u);
+	public ResponseEntity<User> UpdateUser(@RequestBody User u){
+		User updateduser =userServices.UpdateUser(u);
 		
 		return new ResponseEntity<>(updateduser,HttpStatus.ACCEPTED);
 	}
@@ -43,8 +43,8 @@ public class userContoller {
 		 return new ResponseEntity<>(deletedUser,HttpStatus.OK);
 	}
 	@GetMapping("/allusers")
-	public ResponseEntity<List<user>> alluser(){
-		List<user> allUser=userServices.ShowAllUser();
+	public ResponseEntity<List<User>> alluser(){
+		List<User> allUser=userServices.ShowAllUser();
 		return new ResponseEntity<>(allUser,HttpStatus.ACCEPTED);
 	}
 }

@@ -2,6 +2,7 @@ package com.sweettastic.product.controller;
 
 import java.util.List;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,8 +24,8 @@ public class ProductController {
 	private ProductService productService;
 	
 	
-	@PostMapping("/")
-	public ResponseEntity<Product> addProductHandler(@RequestBody Product product){
+	@PostMapping("/add")
+	public ResponseEntity<Product> addProductHandler(@Valid @RequestBody Product product){
 		
 		Product savedProduct = productService.addProduct(product);
 		

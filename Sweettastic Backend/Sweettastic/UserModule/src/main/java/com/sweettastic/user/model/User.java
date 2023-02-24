@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
-public class user {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,10 +14,10 @@ public class user {
 	private String password;
 	private String passwordConfirm;
 	private String type;
-	public user() {
+	public User() {
 		super();
 	}
-	public user(Integer userId, String userName, String password, String passwordConfirm, String type) {
+	public User(Integer userId, String userName, String password, String passwordConfirm, String type) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -55,7 +55,6 @@ public class user {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
-	
+
 
 }

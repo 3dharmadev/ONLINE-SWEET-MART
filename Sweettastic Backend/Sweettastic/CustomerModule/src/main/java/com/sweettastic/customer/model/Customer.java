@@ -1,8 +1,5 @@
 package com.sweettastic.customer.model;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import com.sweettastic.Cart.Model.Cart;
 import com.sweettastic.sweetorder.model.SweetOrder;
@@ -22,7 +19,7 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
-	private int temp;
+
 	private String username;
 	@OneToMany(cascade = CascadeType.ALL)//targetEntity=SweetItem.class
 	@JoinColumn(referencedColumnName = "userId")
@@ -37,14 +34,6 @@ public class Customer {
 
 	public void setUserId(Long userId) {
 		this.userId = userId;
-	}
-
-	public int getTemp() {
-		return temp;
-	}
-
-	public void setTemp(int temp) {
-		this.temp = temp;
 	}
 
 	public String getUsername() {
@@ -71,9 +60,17 @@ public class Customer {
 	public void setCart(Cart cart) {
 		this.cart = cart;
 	}
-	
-	
-	
-	
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Customer customer = (Customer) o;
+		return Objects.equals(userId, customer.userId) && Objects.equals(username, customer.username) && Objects.equals(cart, customer.cart);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(userId, username, cart);
+	}
 }
