@@ -27,11 +27,7 @@ public class Customer {
 	@OneToMany(cascade = CascadeType.ALL)//targetEntity=SweetItem.class
 	@JoinColumn(referencedColumnName = "userId")
 	private Set<SweetOrder> sweetOrders=new HashSet<>();// override equals and hashcode
-	
-//	@OneToMany(cascade = CascadeType.ALL)//targetEntity=SweetItem.class
-//	@JoinColumn(referencedColumnName = "userId")
-//	private List<SweetItem> SweetItems=new ArrayList<>();
-	
+ 
 	@OneToOne
 	private Cart cart;
 
@@ -66,14 +62,7 @@ public class Customer {
 	public void setSweetOrders(Set<SweetOrder> sweetOrders) {
 		this.sweetOrders = sweetOrders;
 	}
-
-	public List<SweetItem> getSweetItems() {
-		return SweetItems;
-	}
-
-	public void setSweetItems(List<SweetItem> sweetItems) {
-		SweetItems = sweetItems;
-	}
+ 
 
 	public Cart getCart() {
 		return cart;
@@ -82,6 +71,8 @@ public class Customer {
 	public void setCart(Cart cart) {
 		this.cart = cart;
 	}
+	
+	
 	
 	
 
