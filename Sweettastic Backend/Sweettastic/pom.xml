@@ -20,6 +20,7 @@
 	<dependencies>
 
 
+
 		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
@@ -83,14 +84,5 @@
 		</plugins>
 	</build>
 
-	<modules>
-		<module>AdminModule</module>
-		<module>CustomerModule</module>
-		<module>UserModule</module>
-		<module>ProductModule</module>
-		<module>CategoryModule</module>
-		<module>SweetOrderModule</module>
-		<module>CartModule</module>
-		<module>OrderBillModule</module>
-	</modules>
+
 </project>
