@@ -34,7 +34,8 @@ The "ONLINE SWEET MART" REST API is designed to provide backend functionality fo
 
 The REST API is built using the following technologies:
 
-- Java Spring Boot
+- Java
+- Spring Boot
 - Hibernate
 - MySQL
 - Swagger UI
