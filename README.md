@@ -1,10 +1,10 @@
-# ONLINE SWEET MART
+ # ONLINE SWEET MART REST API
 
 ![Online Sweet Mart Logo](https://github.com/3dharmadev/ONLINE-SWEET-MART/blob/main/src/main/webapp/images/logo.png)
 
 ## Introduction
 
-The "ONLINE SWEET MART" is a full-stack web application designed to offer a delightful shopping experience for a wide variety of sweets and confectionery items. This project was developed collaboratively by a team of four individuals in just four days. The application provides both customers and administrators with essential features for a seamless shopping and management experience.
+The "ONLINE SWEET MART" REST API is designed to provide backend functionality for managing a delightful shopping experience for a wide variety of sweets and confectionery items. This project was collaboratively developed by a team of four individuals in just four days. The API is intended to be used by front-end applications to offer essential features for a seamless shopping and management experience.
 
 ## Features
 
@@ -32,13 +32,12 @@ The "ONLINE SWEET MART" is a full-stack web application designed to offer a deli
 
 ### Tech Stack
 
-The application is built using the following technologies:
+The REST API is built using the following technologies:
 
 - Java Spring Boot
 - Hibernate
 - MySQL
 - Swagger UI
-- Apache Tomcat
 
 ## Setup and Deployment
 
